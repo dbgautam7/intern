@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h3>This is http delete request</h3>
+  </head>
+  <body>
+    <button id="delDataBtn">Delete</button>
+    <script>
+        const deleteBtn = document.getElementById("delDataBtn");
+        // async await promise
+        deleteBtn.addEventListener("click", async () => {
+          try {
+            const response = await axios.delete("http://localhost:3005");
+            console.log(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+        });
+      </script>
+  </body>
+</html>

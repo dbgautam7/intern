@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="http.css">
+    <h3>This is http put request</h3>
+  </head>
+  <body>
+    <button id="putDataBtn">Put</button>
+    <script>
+      const getDataBtn = document.getElementById("putDataBtn");
+      getDataBtn.addEventListener("click", function() {
+        axios.put("http://localhost:3005",{
+            name:"Bikash"
+        })
+          .then(function(response) {
+            console.log(response.data);
+          })
+          .catch(function(error) {
+            console.error(error);
+          });
+      });
+    </script>
+  </body>
+</html>

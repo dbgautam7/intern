@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="http.css">
+    <h3>This is http post request</h3>
+  </head>
+  <body>
+    <button id="postDataBtn">Post</button>
+    <script>
+      const postDataBtn = document.getElementById("postDataBtn");
+      getDataBtn.addEventListener("click", function() {
+        axios.post("http://localhost:3005",{
+            age:30
+        })
+          .then(function(response) {
+            console.log(response.data);
+          })
+          .catch(function(error) {
+            console.error(error);
+          });
+      });
+    </script>
+  </body>
+</html>
