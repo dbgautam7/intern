@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h3>This is http get request</h3>
+  </head>
+  <body>
+    <button id="getDataBtn">Get</button>
+    <script>
+      const getDataBtn = document.getElementById("getDataBtn");
+      getDataBtn.addEventListener("click", function() {
+        axios.get("http://localhost:3005")
+        // .then => catch promise used
+          .then((response)=> {
+            console.log(response.data);
+          })
+          .catch((error)=> {
+            console.error(error);
+          });
+      });
+    </script>
+  </body>
+</html>
